@@ -32,7 +32,7 @@ This project is an **AI-powered Applicant Tracking System (ATS)** that uses the 
 python 3.11 -m venv 
 # Activate the environment
 source activate venv
-''' 
+``` 
 
 ### 2. Install Dependencies
 
@@ -59,7 +59,7 @@ As an ATS scanner and a Technical HR Manager, please provide an analysis of the 
 - Overall Summary: [brief summary]
 - Position Match: {position_match}
 """
-'''
+```
 
 ### 5. Ingest Job Description & Resume (PDFs)
 
