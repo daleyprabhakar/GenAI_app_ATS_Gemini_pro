@@ -38,7 +38,7 @@ source activate venv
 
 ```bash
 pip install -r requirements.txt
-'''
+```
 
 ### 3. Save API Keys Securely
 
@@ -70,7 +70,7 @@ def input_pdf_text(uploaded_file):
     for page in reader.pages:
         text += page.extract_text() or ""
     return text
-'''
+```
 
 ### 6. Extract Skills
 
@@ -91,13 +91,13 @@ def calculate_jd_match(job_description, resume):
     # Calculate match percentage
     match_percentage = len(jd_skills.intersection(resume_skills)) / len(jd_skills) * 100 if jd_skills else 0
     return round(match_percentage, 2)
-'''
+```
 
 ### 8. Streamlit UI
 
 ```bash
 streamlit run app.py
-'''
+```
 
 ### 9. Upload to GitHub
 
@@ -107,7 +107,7 @@ git remote add origin https://github.com/daleyprabhakar/GenAI_app_ATS_Gemini_pro
 git add .
 git commit -m "First Commit"
 git push origin main
-'''
+```
 ---
 
 ## Installation
@@ -117,3 +117,22 @@ git push origin main
    git clone https://github.com/daleyprabhakar/GenAI_app_ATS_Gemini_pro.git
    cd GenAI_app_ATS_Gemini_pro
    '''
+
+## Using as a Streamlit App
+
+1. **Login to [Streamlit Cloud](https://streamlit.io)** using your GitHub credentials.
+2. Click on **"Create app"**.
+3. Choose **"Create a public app from GitHub repo"**.
+4. Enter your GitHub repository URL (e.g., `https://github.com/yourusername/ats-tracker`).
+5. Click on **"Advanced Settings"** → **"Secrets"**, and add your secret keys:
+
+    ```env
+    GOOGLE_API_KEY=your_gemini_api_key
+    ```
+
+6. In the same screen, select:
+    - **Branch:** `main`
+    - **Main file path:** `ATS.py`
+    - **Python version:** `3.11` (or as per your virtual environment)
+
+7. Click **"Deploy"**. Once deployed, your app will be live. You can now upload resumes and job descriptions directly in the browser.
